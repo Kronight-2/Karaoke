@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/pngegg.png">
+    <title>Karaoke Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button id="queueBtn" class="queue-btn">Q</button>
+
+    <div id="queuePanel" class="queue-floating-window hidden">
+        <h3 class="queue-title">Queue</h3>
+        <ul id="queueList" class="queue-list-items">
+        </ul>
+        <div class="pagination">
+            <button id="prevBtn" class="page-btn">←</button>
+            <span id="pageInfo">1 / 1</span>
+            <button id="nextBtn" class="page-btn">→</button>
+        </div>
+    </div>
+
+    <div class="layout-container">
+        
+        <div class="now-playing-box">
+            <img id="npCover" src="assets/shhh.jpg" alt="Cover" class="now-playing-cover">
+            
+            <div class="now-playing-info">
+                <span class="np-label">NOW PLAYING</span>
+                <h2 id="npTitle" class="np-title">...</h2>
+                <p id="npArtist" class="np-artist">-</p>
+            </div>
+
+            <button id="skipBtn" class="skip-btn" title="Skip Lagu">⏭</button>
+        </div>
+        
+        <div>
+            <h2 style="color: #5c4e40;" >This is a Simple Karaoke Player. Video might not show up properly.</h2>
+        </div>
+
+        <div class="list-box">
+            <input type="text" id="searchInput" class="search-box" placeholder="Type song name and press Enter..." title="Type song name and press Enter">
+            <h2 class="list-title">Song List</h2>
+            
+            <ul id="spotifyList" class="spotify-list">
+            </ul>
+        </div>
+
+        <div class="video-box" style="padding: 0; overflow: hidden;">
+            <div id="ytplayer"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
